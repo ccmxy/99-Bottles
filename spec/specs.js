@@ -13,7 +13,4 @@ describe('bottlesOfBeerForScripts', function() {
     " 1 bottles of beeer.... take one down, pass it around,\n0 bottles of beer on the wall!No more bottles of beer on the wall, no more bottles of beer."+
     " Go to the store and buy some more,  99 bottles of beer on the wall.");
   });
-
-  ///oissue
-
 });

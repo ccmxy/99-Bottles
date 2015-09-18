@@ -14,10 +14,10 @@ var bottlesOfBeerForScripts = function(number) {
     return temp;
   };
 
-
 $(document).ready(function() {
   $("form#get-fact").submit(function(event) {
-    var number = parseInt($("input#number").val());
+//decided not to use this because I don't know how to get the
+// newlines to print in the html file, from a string in a js file.
     event.preventDefault();
   });
 });
