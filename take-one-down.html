@@ -21,8 +21,29 @@
       </form>
 
       <div id="the-song">
+        <script>
+        bottlesOfBeer(number);
+      var bottlesOfBeer = function(number) {
+        if(number < 1){
+         document.writeln("<br> <br>No more bottles of beer on the wall," +
+          " no more bottles of beer." +
+            " Go to the store and buy some more,"  +
+          "  99 bottles of beer on the wall.");
+
+          return 0;
+        }
+
+        var temp = document.writeln("<br><br> "+ number + " bottles of beer on the wall, " +
+          number + " bottles of beeer.... take one down, " +
+          "pass it around,\n" + (number - 1) +
+          " bottles of beer on the wall!");
+
+          temp = (temp + bottlesOfBeer(number - 1));
+
+        }
+        </script>
         <p> Gonna sing here</p>
-        <p><span class="bottles"></span></p>
+        <p><span class="bottles"><br></span></p>
 
       </div>
 
