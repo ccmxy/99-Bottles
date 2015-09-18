@@ -1,23 +1,30 @@
 
-var bottlesOfBeerForScripts = function(number) {
-    var temp = ("\n" + number + " bottles of beer on the wall, " +
-    number + " bottles of beeer.... take one down, " +
-    "pass it around,\n" + (number - 1) +
-    " bottles of beer on the wall!");
-    if(number < 1){
-      return ("No more bottles of beer on the wall," +
-       " no more bottles of beer." +
-       " Go to the store and buy some more,"  +
-     "  99 bottles of beer on the wall.");
-    }
-    temp = (temp + bottlesOfBeerForScripts(number - 1));
-    return temp;
-  };
+var bottlesOfBeer = function(number) {
+  var temp = ("\n" + number + " bottles of beer on the wall, " +
+  number + " bottles of beeer.... take one down, " +
+  "pass it around,\n" + (number - 1) +
+  " bottles of beer on the wall!");
+  temp = temp
+  if(number < 1){
+    return 1;
+  }
+  /*
+  temp = (temp + bottlesOfBeer(number - 1));
+  */
+  return temp;
+};
+
 
 $(document).ready(function() {
-  $("form#get-bottles").submit(function(event) {
-//decided not to use this because I don't know how to get the
-// newlines to print in the html file, from a string in a js file.
+  $("form#get-fact").submit(function(event) {
+    var number = parseInt($("input#number").val());
+  //  var factorial = getFactorial(number);
+    var bottles = bottlesOfBeer(number);
+  /*  for(var i = 0; i < number; i++){
+      bottles = bottlesOfBeer(i);
+      $(".bottles").text(bottles);
+    }*/
+
     event.preventDefault();
   });
 });
