@@ -5,46 +5,38 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Factorial</title>
+    <title>Take One Down</title>
   </head>
   <body>
     <div class="container">
       <h1>bottles of beer</h1>
 
-      <form id="get-fact">
+      <form id="get-bottles">
         <div class="form-group">
           <label for="number">Hi there! How many bottles of beer would you like to take down from the wall?</label>
           <input id="number" type="number">
         </div>
-
         <button type="submit" class="btn">Sing to me!</button>
       </form>
 
       <div id="the-song">
         <script>
-        bottlesOfBeer(number);
       var bottlesOfBeer = function(number) {
         if(number < 1){
          document.writeln("<br> <br>No more bottles of beer on the wall," +
           " no more bottles of beer." +
             " Go to the store and buy some more,"  +
           "  99 bottles of beer on the wall.");
-
           return 0;
         }
-
         var temp = document.writeln("<br><br> "+ number + " bottles of beer on the wall, " +
           number + " bottles of beeer.... take one down, " +
           "pass it around,\n" + (number - 1) +
           " bottles of beer on the wall!");
-
+          //Recursively call function
           temp = (temp + bottlesOfBeer(number - 1));
-
         }
         </script>
-        <p> Gonna sing here</p>
-        <p><span class="bottles"><br></span></p>
-
       </div>
 
 
